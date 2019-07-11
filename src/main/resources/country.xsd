@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="country">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="name">
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" ref="cities"/>
+                    </xs:sequence>
+                    <xs:attribute name="countryId" use="required" type="xs:integer"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="cities">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="name">
+                    <xs:attribute name="countryId" use="required" type="xs:integer"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="name">
+        <xs:sequence>
+            <xs:element ref="name"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="name" type="xs:NCName"/>
+</xs:schema>

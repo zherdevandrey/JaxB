@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<country countryId="1">
+    <name>Russia</name>
+    <cities countryId="1">
+        <name>Moscow</name>
+    </cities>
+    <cities countryId="1">
+        <name>London</name>
+    </cities>
+    <cities countryId="1">
+        <name>Paris</name>
+    </cities>
+</country>
